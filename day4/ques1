@@ -1,5 +1,3 @@
-# Generate Fibonacci Series
-
 n = int(input("Enter the number of terms: "))
 
 a, b = 0, 1
