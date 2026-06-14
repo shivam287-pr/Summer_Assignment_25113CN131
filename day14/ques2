@@ -1,0 +1,10 @@
+arr = list(map(int, input("Enter array elements separated by space: ").split()))
+key = int(input("Enter the element to find frequency: "))
+
+count = 0
+
+for num in arr:
+    if num == key:
+        count += 1
+
+print("Frequency of", key, "is", count)

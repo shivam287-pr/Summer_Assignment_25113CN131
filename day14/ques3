@@ -1,0 +1,12 @@
+arr = list(map(int, input("Enter array elements separated by space: ").split()))
+
+if len(arr) < 2:
+    print("Array must contain at least two elements.")
+else:
+    arr = list(set(arr))  # Remove duplicates
+
+    if len(arr) < 2:
+        print("No second largest element exists.")
+    else:
+        arr.sort()
+        print("Second largest element is:", arr[-2])
