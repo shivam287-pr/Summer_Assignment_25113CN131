@@ -1,0 +1,8 @@
+arr = list(map(int, input("Enter array elements separated by space: ").split()))
+
+result = [x for x in arr if x != 0]
+zero_count = arr.count(0)
+
+result.extend([0] * zero_count)
+
+print("Array after moving zeroes to end:", result)
