@@ -1,0 +1,5 @@
+arr = list(map(int, input("Enter array elements: ").split()))
+
+unique_arr = list(set(arr))
+
+print("Array after removing duplicates:", unique_arr)
