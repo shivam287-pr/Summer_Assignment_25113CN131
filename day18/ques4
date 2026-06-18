@@ -1,0 +1,5 @@
+arr = list(map(int, input("Enter elements separated by space: ").split()))
+
+arr.sort(reverse=True)
+
+print("Array in descending order:", arr)
