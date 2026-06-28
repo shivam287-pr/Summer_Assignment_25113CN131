@@ -1,0 +1,40 @@
+name = input("Enter Student Name: ")
+roll = input("Enter Roll Number: ")
+
+marks = []
+
+for i in range(1, 6):
+    mark = float(input(f"Enter marks for Subject {i}: "))
+    marks.append(mark)
+
+total = sum(marks)
+percentage = total / 5
+
+if percentage >= 90:
+    grade = "A+"
+elif percentage >= 80:
+    grade = "A"
+elif percentage >= 70:
+    grade = "B"
+elif percentage >= 60:
+    grade = "C"
+elif percentage >= 50:
+    grade = "D"
+else:
+    grade = "F"
+
+print("\n========== MARKSHEET ==========")
+print("Student Name :", name)
+print("Roll Number  :", roll)
+
+for i in range(5):
+    print(f"Subject {i+1} Marks :", marks[i])
+
+print("Total Marks  :", total)
+print("Percentage   :", percentage)
+print("Grade        :", grade)
+
+if percentage >= 50:
+    print("Result       : PASS")
+else:
+    print("Result       : FAIL")
