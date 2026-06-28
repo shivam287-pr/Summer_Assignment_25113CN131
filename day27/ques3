@@ -1,0 +1,65 @@
+employees = []
+
+while True:
+    print("\nSalary Management System")
+    print("1. Add Employee Salary")
+    print("2. Display Salary Records")
+    print("3. Search Employee Salary")
+    print("4. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        emp_id = input("Enter Employee ID: ")
+        name = input("Enter Employee Name: ")
+        basic = float(input("Enter Basic Salary: "))
+        bonus = float(input("Enter Bonus: "))
+        total_salary = basic + bonus
+
+        employees.append({
+            "id": emp_id,
+            "name": name,
+            "basic": basic,
+            "bonus": bonus,
+            "total": total_salary
+        })
+
+        print("Salary record added successfully.")
+
+    elif choice == "2":
+        if not employees:
+            print("No salary records found.")
+        else:
+            print("\nSalary Records:")
+            for emp in employees:
+                print(f"Employee ID: {emp['id']}")
+                print(f"Name: {emp['name']}")
+                print(f"Basic Salary: {emp['basic']}")
+                print(f"Bonus: {emp['bonus']}")
+                print(f"Total Salary: {emp['total']}")
+                print()
+
+    elif choice == "3":
+        emp_id = input("Enter Employee ID to search: ")
+        found = False
+
+        for emp in employees:
+            if emp["id"] == emp_id:
+                print("\nSalary Record Found:")
+                print(f"Employee ID: {emp['id']}")
+                print(f"Name: {emp['name']}")
+                print(f"Basic Salary: {emp['basic']}")
+                print(f"Bonus: {emp['bonus']}")
+                print(f"Total Salary: {emp['total']}")
+                found = True
+                break
+
+        if not found:
+            print("Employee record not found.")
+
+    elif choice == "4":
+        print("Exiting...")
+        break
+
+    else:
+        print("Invalid choice. Please try again.")
